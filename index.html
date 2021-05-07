@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" async></script>
+    <title>Under The Sea</title>
+</head>
+
+<body>
+    <div id="firstScreen" class="overlay-text visible">
+        <form>
+            <label id="label1" for="player1">Player 1
+                <input id="player1" placeholder="enter name..." type="text" maxlength="20" value=""></input></label>
+            <label id="label2" for="player2">Player 2
+                <input id="player2" placeholder="enter name..." type="text" maxlength="20" value=""></input></label>
+            <label id="level1" for="3X4"><input id="3X4" type="radio" name="level" value="3X4"></input>3X4</label>
+            <label id="level2" for="4X4"><input id="4X4" type="radio" name="level" value="4X4"></input>4X4</label>
+        </form>
+        <div class="start">
+            Click to Start
+        </div>
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <div class='restart1'>
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY
+        <span id="winner"></span>
+        <div class='restart2'>
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
+    </div>
+    <h1 class="page-title">Under The Sea</h1>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="timer">100</span>
+            </div>
+            <div class="game-info">
+                <span id="namePlayer">player</span>'s turn
+            </div>
+            <div class="game-info">
+                Score <span id="scores">0</span>
+            </div>
+        </div>
+        <div id="Fish1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/Fish.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Fish2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/Fish.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Dolfin1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/clipart2470578.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Dolfin2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/clipart2470578.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Shell1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/Shell.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Shell2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/Shell.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="starFish1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/starfish.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="starFish2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/starfish.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Turtle1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/Turtle.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="Turtle2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/Turtle.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="seaHorse1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div  class="card-front card-face">
+                <img class="card-value" src="Accets/Images/seahorse.png" width="100" height="100">
+            </div>
+        </div>
+        <div id="seaHorse2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/seahorse.png" width="100" height="100">
+            </div>
+        </div>
+        <div hidden id="sharkCrad1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/whale.png" width="100" height="100">
+            </div>
+        </div>
+        <div hidden id="sharkCrad2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/whale.png" width="100" height="100">
+            </div>
+        </div>
+        <div hidden id="jellyfishCrad1" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/jellyfish.png" width="100" height="100">
+            </div>
+        </div>
+        <div hidden id="jellyfishCrad2" class="card">
+            <div class="card-back card-face">
+                <img class="wave" src="Accets/Images/wave.png" width="125" height="175">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Accets/Images/jellyfish.png" width="100" height="100">
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
